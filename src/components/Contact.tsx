@@ -39,6 +39,15 @@ export default function Contact() {
             <CardBody k="LinkedIn" v="Shubham Modh" />
             <span className="ml-auto text-accent">↗</span>
           </a>
+          <a
+            className={cardCls}
+            href="https://github.com/modhshubham3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CardBody k="GitHub" v="modhshubham3" />
+            <span className="ml-auto text-accent">↗</span>
+          </a>
           <a className={cardCls} href="tel:+918128027890">
             <CardBody k="Phone" v="+91 81280 27890" />
           </a>
