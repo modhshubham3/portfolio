@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shubham Modh — Portfolio
 
-## Getting Started
+Personal portfolio of **Shubham Modh**, full-stack .NET developer building
+real-time GPS fleet-tracking platforms (~700 buses) on C#, PostgreSQL, Kafka,
+and Angular.
 
-First, run the development server:
+Built with **Next.js 16** (App Router, static export) and **Tailwind CSS 4**.
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Outputs a fully static site to `out/` (`output: "export"` in
+`next.config.ts`), so it deploys anywhere — Vercel picks it up automatically.
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/` — layout (fonts, metadata, theme bootstrap) and the single page
+- `src/components/` — one component per section: Nav, Hero, About, Stack,
+  Projects, Experience, Education, CollegeProjects, Contact, Footer, plus small
+  client components (ThemeToggle, Typewriter, Reveal, MobileMenu)
+- `src/app/globals.css` — design tokens (dark-first, light via system
+  preference or the toggle) mapped to Tailwind utilities via `@theme`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Dark/light theme: respects the OS by default; the navbar toggle overrides
+  and persists the choice in `localStorage`.
+- All animations are gated behind `prefers-reduced-motion`.
+- No client-side data fetching, no external assets except Google Fonts via
+  `next/font`.
