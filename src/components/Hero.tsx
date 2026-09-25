@@ -1,4 +1,5 @@
 import Typewriter from "./Typewriter";
+import TrackedLink from "./TrackedLink";
 import { btnCls, btnPrimaryCls } from "./ui";
 
 const orbitChips: { ic: string; label: string; pos: string; delay: string }[] = [
@@ -37,14 +38,16 @@ export default function Hero() {
             <a href="#projects" className={btnPrimaryCls}>
               View Projects ↓
             </a>
-            <a
+            <TrackedLink
+              event="resume_open"
+              where="hero"
               href="/ShubhamModh_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={btnCls}
             >
               Resume (PDF)
-            </a>
+            </TrackedLink>
             <a href="#contact" className={btnCls}>
               Get in touch ↓
             </a>

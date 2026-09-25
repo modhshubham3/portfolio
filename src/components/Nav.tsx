@@ -1,5 +1,6 @@
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
+import TrackedLink from "./TrackedLink";
 import { btnCls } from "./ui";
 
 const sections = [
@@ -45,14 +46,16 @@ export default function Nav() {
             <span className="mr-[3px] font-mono text-xs text-accent">07.</span>
             Contact
           </a>
-          <a
+          <TrackedLink
+            event="resume_open"
+            where="nav"
             href="/ShubhamModh_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={btnCls}
           >
             Resume
-          </a>
+          </TrackedLink>
           <MobileMenu sections={sections} />
           <ThemeToggle />
         </div>

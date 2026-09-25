@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Shubham Modh — Full-Stack .NET Developer",
     description,
   },
