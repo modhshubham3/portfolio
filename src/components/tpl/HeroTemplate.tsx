@@ -31,7 +31,7 @@ const socials = [
 export default function HeroTemplate() {
   return (
     <section id="home" className="px-6 pt-[120px] max-[900px]:pt-[104px]">
-      <div className="mx-auto grid max-w-[1120px] grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-4">
+      <div className="mx-auto grid max-w-[1340px] grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-4">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3.5 py-1.5 text-[13px] font-medium text-muted shadow-card">
             <span className="h-2 w-2 rounded-full bg-ok motion-safe:animate-pulse-dot" />
@@ -103,12 +103,12 @@ export default function HeroTemplate() {
             <div className="flex h-full w-full flex-col overflow-hidden">
               {/* lanyard clamp */}
               <div className="flex justify-center bg-panel pb-1 pt-2">
-                <span className="h-[7px] w-[52px] rounded-full bg-[#1f2430]" />
+                <span className="h-[8px] w-[62px] rounded-full bg-[#1f2430]" />
               </div>
 
               {/* photo panel — purple fading to white, with a diagonal shine */}
               <div
-                className="relative flex justify-center px-3 pb-5 pt-4"
+                className="relative flex justify-center px-4 pb-6 pt-5"
                 style={{
                   background:
                     "linear-gradient(135deg, #7c3aed 0%, #9a6bf7 34%, #d9ccff 72%, #ffffff 100%)",
@@ -122,34 +122,34 @@ export default function HeroTemplate() {
                   }}
                   aria-hidden="true"
                 />
-                <span className="relative block h-[92px] w-[92px] shrink-0 rounded-full bg-gradient-to-br from-[#fca5a5] via-[#f0abfc] to-[#67e8f9] p-[3px] shadow-lg">
+                <span className="relative block h-[118px] w-[118px] shrink-0 rounded-full bg-gradient-to-br from-[#fca5a5] via-[#f0abfc] to-[#67e8f9] p-[3px] shadow-lg">
                   <img
                     src="/shubham.jpg"
                     alt="Shubham Modh"
-                    width={92}
-                    height={92}
-                    className="block h-[86px] w-[86px] rounded-full object-cover"
+                    width={118}
+                    height={118}
+                    className="block h-[112px] w-[112px] rounded-full object-cover"
                     style={{ objectPosition: "60% 20%" }}
                   />
                 </span>
               </div>
 
-              <div className="flex flex-1 flex-col bg-panel px-3 pb-3 pt-2.5">
-                <p className="text-center text-[16px] font-bold leading-tight text-ink">
+              <div className="flex flex-1 flex-col bg-panel px-4 pb-4 pt-3">
+                <p className="text-center text-[18px] font-bold leading-tight text-ink">
                   Shubham Modh
                 </p>
-                <p className="mt-2 self-center rounded-full border border-line px-3 py-1 text-[10.5px] font-semibold text-ink">
+                <p className="mt-2 self-center rounded-full border border-line px-3.5 py-1 text-[11.5px] font-semibold text-ink">
                   Full-Stack .NET Developer
                 </p>
 
                 <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2.5 rounded-lg border border-line p-2.5">
                   {idFacts.map((f) => (
                     <div key={f.k}>
-                      <p className="font-mono text-[8px] uppercase tracking-[0.12em] text-muted">
+                      <p className="font-mono text-[8.5px] uppercase tracking-[0.12em] text-muted">
                         {f.k}
                       </p>
                       <p
-                        className={`mt-0.5 text-[11px] font-bold leading-tight ${f.ok ? "text-ok" : "text-ink"}`}
+                        className={`mt-0.5 text-[12px] font-bold leading-tight ${f.ok ? "text-ok" : "text-ink"}`}
                       >
                         {f.ok ? "● " : ""}
                         {f.v}

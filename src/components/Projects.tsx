@@ -328,7 +328,7 @@ function ProjectCard({ p }: { p: Project }) {
 export default function Projects() {
   return (
     <section id="projects" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead
           no="03"
           label="Selected Work"

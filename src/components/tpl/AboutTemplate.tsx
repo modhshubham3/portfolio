@@ -41,7 +41,7 @@ const stats = [
 export default function AboutTemplate() {
   return (
     <section id="about" className="px-6 pt-[104px]">
-      <Reveal className="mx-auto grid max-w-[1120px] grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center gap-14 max-[900px]:grid-cols-1 max-[900px]:gap-9">
+      <Reveal className="mx-auto grid max-w-[1340px] grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center gap-14 max-[900px]:grid-cols-1 max-[900px]:gap-9">
         <div>
           <h2 className="text-[clamp(30px,4.4vw,46px)] font-extrabold leading-[1.1] tracking-[-0.02em]">
             Built for the{" "}

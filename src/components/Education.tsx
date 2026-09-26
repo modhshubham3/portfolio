@@ -19,7 +19,7 @@ const entries = [
 export default function Education() {
   return (
     <section id="education" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="05" label="Education" title="Foundations." />
         <div className="mt-11 grid gap-4">
           {entries.map((e) => (

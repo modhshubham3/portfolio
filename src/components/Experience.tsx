@@ -24,7 +24,7 @@ const bullets: React.ReactNode[] = [
 export default function Experience() {
   return (
     <section id="experience" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="04" label="Experience" title="Where I’ve been shipping." />
         <div className="relative mt-[46px] border-l-2 border-line py-1 pl-[30px]">
           <span className="absolute -left-[7px] top-2.5 h-3 w-3 rounded-full bg-accent" />

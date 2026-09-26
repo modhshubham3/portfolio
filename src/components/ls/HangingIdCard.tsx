@@ -189,7 +189,7 @@ export const HangingIdCard = ({
         </div>
 
         {/* ID Card */}
-        <div className="relative w-52 rounded-2xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 bg-white dark:bg-zinc-900 pointer-events-none mt-[-2px]">
+        <div className="relative w-[268px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 bg-white dark:bg-zinc-900 pointer-events-none mt-[-2px]">
           {children ?? (
             <div className="flex flex-col h-full">
               {/* Card header banner */}

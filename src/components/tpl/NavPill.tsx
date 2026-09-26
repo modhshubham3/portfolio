@@ -15,7 +15,7 @@ export default function NavPill() {
     <header className="fixed inset-x-0 top-4 z-50 px-5">
       <nav
         aria-label="Primary"
-        className="mx-auto flex max-w-[1120px] items-center gap-5 rounded-[18px] border border-line bg-panel px-5 py-3 shadow-card backdrop-blur-md"
+        className="mx-auto flex max-w-[1340px] items-center gap-5 rounded-[18px] border border-line bg-panel px-5 py-3 shadow-card backdrop-blur-md"
       >
         <a href="#home" className="flex items-center gap-2.5">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#7c3aed] to-[#2f9bf5] font-serif text-[15px] font-bold italic text-white">

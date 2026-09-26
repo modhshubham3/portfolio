@@ -24,7 +24,7 @@ export default function Nav() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-[62px] max-w-[1080px] items-center gap-6 px-7 max-[380px]:gap-3">
+      <div className="mx-auto flex h-[62px] max-w-[1340px] items-center gap-6 px-7 max-[380px]:gap-3">
         <a href="#top" className="font-serif text-[21px] font-bold text-ink no-underline">
           Shubham<span className="text-accent">.</span>
         </a>

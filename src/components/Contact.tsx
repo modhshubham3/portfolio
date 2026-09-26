@@ -16,7 +16,7 @@ function CardBody({ k, v }: { k: string; v: string }) {
 export default function Contact() {
   return (
     <section id="contact" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="07" label="Contact" title="Let’s connect." />
         <p className="mt-[30px] max-w-[52ch] text-[18px] text-muted">
           I&rsquo;m open to backend and full-stack .NET roles. The fastest way to

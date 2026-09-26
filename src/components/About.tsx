@@ -12,7 +12,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="01" label="About" title="I keep ~700 buses on the map, in real time." />
         <div className="mt-11 grid grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] items-start gap-11 max-[860px]:grid-cols-1">
           <div className="text-muted [&_strong]:font-semibold [&_strong]:text-ink">

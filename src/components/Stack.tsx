@@ -48,7 +48,7 @@ const groups: { cat: string; chips: string[] }[] = [
 export default function Stack() {
   return (
     <section id="stack" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="02" label="Stack" title="Tools I work with, day to day." />
         <div className="mt-[46px] grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-5">
           {groups.map((g) => (
