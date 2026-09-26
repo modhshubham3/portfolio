@@ -4,7 +4,7 @@ import TrackedLink from "../TrackedLink";
 const ACCENT = "#6d3bf5";
 
 const idFacts = [
-  { k: "Specialty", v: ".NET & Real-Time Systems" },
+  { k: "Specialty", v: "Real-Time .NET" },
   { k: "Location", v: "Ahmedabad" },
   { k: "Experience", v: "2.7 Years" },
   { k: "Status", v: "Active", ok: true },
@@ -53,11 +53,11 @@ export default function HeroTemplate() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-bg transition-transform duration-200 hover:-translate-y-0.5"
-            >
-              View Work <span aria-hidden="true">→</span>
+            <a href="#projects" className="btn-hero btn-hero-solid">
+              View Work
+              <span className="btn-arrow" aria-hidden="true">
+                →
+              </span>
             </a>
             <TrackedLink
               event="resume_open"
@@ -65,9 +65,12 @@ export default function HeroTemplate() {
               href="/ShubhamModh_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-panel px-7 py-3.5 text-[15px] font-semibold shadow-card transition-transform duration-200 hover:-translate-y-0.5"
+              className="btn-hero btn-hero-ghost"
             >
-              Resume <span aria-hidden="true">↓</span>
+              Resume
+              <span className="btn-down" aria-hidden="true">
+                ↓
+              </span>
             </TrackedLink>
           </div>
 
@@ -79,7 +82,7 @@ export default function HeroTemplate() {
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={s.label}
-                className="text-muted transition-colors duration-200 hover:text-accent"
+                className="social-ico text-muted"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-[21px] w-[21px]">
                   <path d={s.path} />
@@ -92,29 +95,50 @@ export default function HeroTemplate() {
         <div className="flex flex-col items-center max-[900px]:mt-2">
           <HangingIdCard
             ropeLength={120}
-            ropeColor="#2b3446"
+            ropeColor="#1f2430"
             accentColor={ACCENT}
             name="Shubham Modh"
             role="Full-Stack .NET Developer"
           >
-            <div className="flex h-full w-[248px] flex-col overflow-hidden">
-              <div
-                className="flex flex-col items-center px-4 pb-5 pt-4"
-                style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, #2f9bf5 100%)` }}
-              >
-                <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/70">
-                  Portfolio
-                </p>
-                <div className="mt-3 grid h-[86px] w-[86px] place-items-center rounded-full border-[3px] border-white/70 bg-white/15 font-serif text-[38px] font-bold italic text-white backdrop-blur-sm">
-                  S
-                </div>
+            <div className="flex h-full w-full flex-col overflow-hidden">
+              {/* lanyard clamp */}
+              <div className="flex justify-center bg-panel pb-1 pt-2">
+                <span className="h-[7px] w-[52px] rounded-full bg-[#1f2430]" />
               </div>
 
-              <div className="flex flex-1 flex-col bg-panel px-4 py-3.5">
-                <p className="text-center text-[15px] font-bold leading-tight text-ink">
+              {/* photo panel — purple fading to white, with a diagonal shine */}
+              <div
+                className="relative flex justify-center px-3 pb-5 pt-4"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #7c3aed 0%, #9a6bf7 34%, #d9ccff 72%, #ffffff 100%)",
+                }}
+              >
+                <span
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(118deg, transparent 38%, rgba(255,255,255,0.72) 50%, transparent 62%)",
+                  }}
+                  aria-hidden="true"
+                />
+                <span className="relative block h-[92px] w-[92px] shrink-0 rounded-full bg-gradient-to-br from-[#fca5a5] via-[#f0abfc] to-[#67e8f9] p-[3px] shadow-lg">
+                  <img
+                    src="/shubham.jpg"
+                    alt="Shubham Modh"
+                    width={92}
+                    height={92}
+                    className="block h-[86px] w-[86px] rounded-full object-cover"
+                    style={{ objectPosition: "60% 20%" }}
+                  />
+                </span>
+              </div>
+
+              <div className="flex flex-1 flex-col bg-panel px-3 pb-3 pt-2.5">
+                <p className="text-center text-[16px] font-bold leading-tight text-ink">
                   Shubham Modh
                 </p>
-                <p className="mt-1.5 self-center rounded-full border border-line px-2.5 py-1 text-[10.5px] font-semibold text-muted">
+                <p className="mt-2 self-center rounded-full border border-line px-3 py-1 text-[10.5px] font-semibold text-ink">
                   Full-Stack .NET Developer
                 </p>
 

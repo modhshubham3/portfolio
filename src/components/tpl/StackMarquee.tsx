@@ -40,20 +40,22 @@ export default function StackMarquee() {
       <div className="flex flex-col gap-4">
         <SlidingLogoMarquee
           items={rowOne.map(chip)}
-          speed={26}
+          speed={6}
           height="58px"
           gap="14px"
           pauseOnHover
           enableBlur
+          blurIntensity={0.6}
           backgroundColor="transparent"
         />
         <SlidingLogoMarquee
           items={rowTwo.map(chip)}
-          speed={30}
+          speed={7}
           height="58px"
           gap="14px"
           pauseOnHover
           enableBlur
+          blurIntensity={0.6}
           backgroundColor="transparent"
         />
       </div>
