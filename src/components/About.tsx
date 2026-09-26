@@ -1,17 +1,18 @@
+import { CountUp } from "./ls/count-up";
 import Reveal from "./Reveal";
 import { SectionHead } from "./ui";
 
 const stats = [
-  { label: "Shipping production code", value: "2.5+ yrs" },
-  { label: "Buses live-tracked", value: "~700" },
-  { label: "Transport authorities", value: "3" },
-  { label: "GPS packets ingested daily", value: "~6M" },
+  { label: "Shipping production code", value: 2.7, decimals: 1, suffix: "+ yrs" },
+  { label: "Buses live-tracked", value: 700, prefix: "~" },
+  { label: "Transport authorities", value: 3 },
+  { label: "GPS packets ingested daily", value: 6, prefix: "~", suffix: "M" },
 ];
 
 export default function About() {
   return (
     <section id="about" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead no="01" label="About" title="I keep ~700 buses on the map, in real time." />
         <div className="mt-11 grid grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] items-start gap-11 max-[860px]:grid-cols-1">
           <div className="text-muted [&_strong]:font-semibold [&_strong]:text-ink">
@@ -42,9 +43,16 @@ export default function About() {
                 <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
                   {s.label}
                 </div>
-                <div className="mt-2 font-serif text-[34px] font-bold tabular-nums text-accent max-[360px]:text-[26px]">
-                  {s.value}
-                </div>
+                <CountUp
+                  value={s.value}
+                  decimals={s.decimals ?? 0}
+                  prefix={s.prefix ?? ""}
+                  suffix={s.suffix ?? ""}
+                  duration={1.8}
+                  triggerOnView
+                  className="mt-2 justify-start font-serif text-[34px] font-bold tabular-nums max-[360px]:text-[26px]"
+                  numberClassName="[&_span]:text-accent"
+                />
               </div>
             ))}
           </div>

@@ -25,7 +25,7 @@ const projects: { tag: string; name: string; text: string; stack: string }[] = [
 export default function CollegeProjects() {
   return (
     <section id="academic" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead
           no="06"
           label="Academic Projects"

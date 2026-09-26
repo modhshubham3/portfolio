@@ -1,3 +1,4 @@
+import { BorderBeam } from "./ls/border-beam";
 import Reveal from "./Reveal";
 import { Chip, SectionHead } from "./ui";
 
@@ -282,8 +283,17 @@ function ProjectCard({ p }: { p: Project }) {
       <div
         className={`grid-bg lift relative min-h-[330px] overflow-hidden rounded-[14px] border border-line p-[26px] shadow-card max-[900px]:aspect-[480/330] max-[900px]:min-h-0 ${p.flip ? "order-2 max-[900px]:order-none" : ""}`}
       >
+        <BorderBeam
+          size={110}
+          duration={9}
+          borderThickness={1.5}
+          colorFrom="var(--accent)"
+          colorTo="transparent"
+        />
         <span className="relative z-10 font-mono text-[12.5px] text-ok">● {p.vtag}</span>
         <div className="absolute inset-0">{p.svg}</div>
+        <div className="absolute inset-x-0 bottom-0 h-[172px] bg-panel" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-[172px] h-[64px] bg-gradient-to-t from-panel to-transparent" aria-hidden="true" />
         <div className="absolute bottom-[22px] left-[26px] right-[26px]">
           <div className="font-mono text-[11.5px] tracking-[0.16em] text-accent">{p.pn}</div>
           <h3 className="mt-1.5 font-serif text-[27px] font-bold">{p.vtitle}</h3>
@@ -318,7 +328,7 @@ function ProjectCard({ p }: { p: Project }) {
 export default function Projects() {
   return (
     <section id="projects" className="pb-2.5 pt-[92px]">
-      <Reveal className="mx-auto max-w-[1080px] px-7">
+      <Reveal className="mx-auto max-w-[1340px] px-7">
         <SectionHead
           no="03"
           label="Selected Work"

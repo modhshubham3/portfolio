@@ -14,7 +14,7 @@ const orbitChips: { ic: string; label: string; pos: string; delay: string }[] = 
 export default function Hero() {
   return (
     <header id="top" className="pb-[70px] pt-[90px]">
-      <div className="mx-auto grid max-w-[1080px] grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-center gap-10 px-7 max-[900px]:grid-cols-1">
+      <div className="mx-auto grid max-w-[1340px] grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-center gap-10 px-7 max-[900px]:grid-cols-1">
         <div>
           <div className="rise rise-1 mb-[26px] inline-flex items-center gap-[9px] font-mono text-[12.5px] uppercase tracking-[0.18em] text-accent">
             <span className="h-2 w-2 rounded-full bg-ok motion-safe:animate-pulse-dot" />
@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <p className="rise rise-4 mt-[22px] max-w-[54ch] text-[18px] text-muted">
             Building real-time fleet-tracking platforms with ASP.NET Core,
-            Angular, and PostgreSQL — 2.5+ years shipping production systems
+            Angular, and PostgreSQL — close to 3 years shipping production systems
             that keep Navi Mumbai&rsquo;s ~700-bus public fleet on the map, with
             deployments across India.
           </p>
