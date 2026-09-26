@@ -288,3 +288,10 @@
     transform: none;
   }
 }
+
+/* The dock floats over the page on desktop — keep content clear of it. */
+@media (min-width: 701px) {
+  body {
+    padding-bottom: 96px;
+  }
+}

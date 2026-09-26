@@ -292,6 +292,8 @@ function ProjectCard({ p }: { p: Project }) {
         />
         <span className="relative z-10 font-mono text-[12.5px] text-ok">● {p.vtag}</span>
         <div className="absolute inset-0">{p.svg}</div>
+        <div className="absolute inset-x-0 bottom-0 h-[172px] bg-panel" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-[172px] h-[64px] bg-gradient-to-t from-panel to-transparent" aria-hidden="true" />
         <div className="absolute bottom-[22px] left-[26px] right-[26px]">
           <div className="font-mono text-[11.5px] tracking-[0.16em] text-accent">{p.pn}</div>
           <h3 className="mt-1.5 font-serif text-[27px] font-bold">{p.vtitle}</h3>

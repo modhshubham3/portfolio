@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Dock from "../ls/Dock";
 
 const icon = (d: string) => (
@@ -22,8 +23,39 @@ const go = (id: string) => () => {
 };
 
 export default function DockBar() {
+  // The dock floats over the page, so it gets out of the way while reading
+  // downward and comes back the moment you scroll up.
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
+  const frame = useRef<number | null>(null);
+
+  useEffect(() => {
+    lastY.current = window.scrollY;
+    const read = () => {
+      frame.current = null;
+      const y = window.scrollY;
+      const delta = y - lastY.current;
+      if (Math.abs(delta) > 6) {
+        setHidden(delta > 0 && y > 260);
+        lastY.current = y;
+      }
+    };
+    const onScroll = () => {
+      if (frame.current === null) frame.current = requestAnimationFrame(read);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      if (frame.current !== null) cancelAnimationFrame(frame.current);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center max-[700px]:hidden">
+    <div
+      className={`pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center transition-[transform,opacity] duration-300 ease-out max-[700px]:hidden ${
+        hidden ? "translate-y-[140%] opacity-0" : "translate-y-0 opacity-100"
+      }`}
+    >
       <div className="pointer-events-auto">
         <Dock
           panelHeight={58}
