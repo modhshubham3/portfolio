@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <p className="rise rise-4 mt-[22px] max-w-[54ch] text-[18px] text-muted">
             Building real-time fleet-tracking platforms with ASP.NET Core,
-            Angular, and PostgreSQL — 2.5+ years shipping production systems
+            Angular, and PostgreSQL — close to 3 years shipping production systems
             that keep Navi Mumbai&rsquo;s ~700-bus public fleet on the map, with
             deployments across India.
           </p>

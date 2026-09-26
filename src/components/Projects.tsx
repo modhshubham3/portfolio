@@ -1,3 +1,4 @@
+import { BorderBeam } from "./ls/border-beam";
 import Reveal from "./Reveal";
 import { Chip, SectionHead } from "./ui";
 
@@ -282,6 +283,13 @@ function ProjectCard({ p }: { p: Project }) {
       <div
         className={`grid-bg lift relative min-h-[330px] overflow-hidden rounded-[14px] border border-line p-[26px] shadow-card max-[900px]:aspect-[480/330] max-[900px]:min-h-0 ${p.flip ? "order-2 max-[900px]:order-none" : ""}`}
       >
+        <BorderBeam
+          size={110}
+          duration={9}
+          borderThickness={1.5}
+          colorFrom="var(--accent)"
+          colorTo="transparent"
+        />
         <span className="relative z-10 font-mono text-[12.5px] text-ok">● {p.vtag}</span>
         <div className="absolute inset-0">{p.svg}</div>
         <div className="absolute bottom-[22px] left-[26px] right-[26px]">

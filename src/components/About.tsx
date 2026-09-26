@@ -1,11 +1,12 @@
+import { CountUp } from "./ls/count-up";
 import Reveal from "./Reveal";
 import { SectionHead } from "./ui";
 
 const stats = [
-  { label: "Shipping production code", value: "2.5+ yrs" },
-  { label: "Buses live-tracked", value: "~700" },
-  { label: "Transport authorities", value: "3" },
-  { label: "GPS packets ingested daily", value: "~6M" },
+  { label: "Shipping production code", value: 2.7, decimals: 1, suffix: "+ yrs" },
+  { label: "Buses live-tracked", value: 700, prefix: "~" },
+  { label: "Transport authorities", value: 3 },
+  { label: "GPS packets ingested daily", value: 6, prefix: "~", suffix: "M" },
 ];
 
 export default function About() {
@@ -42,9 +43,16 @@ export default function About() {
                 <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
                   {s.label}
                 </div>
-                <div className="mt-2 font-serif text-[34px] font-bold tabular-nums text-accent max-[360px]:text-[26px]">
-                  {s.value}
-                </div>
+                <CountUp
+                  value={s.value}
+                  decimals={s.decimals ?? 0}
+                  prefix={s.prefix ?? ""}
+                  suffix={s.suffix ?? ""}
+                  duration={1.8}
+                  triggerOnView
+                  className="mt-2 justify-start font-serif text-[34px] font-bold tabular-nums max-[360px]:text-[26px]"
+                  numberClassName="[&_span]:text-accent"
+                />
               </div>
             ))}
           </div>
