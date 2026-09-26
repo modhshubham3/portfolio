@@ -1,22 +1,23 @@
-import About from "@/components/About";
 import CollegeProjects from "@/components/CollegeProjects";
 import Contact from "@/components/Contact";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
-import Stack from "@/components/Stack";
+import AboutTemplate from "@/components/tpl/AboutTemplate";
+import DockBar from "@/components/tpl/DockBar";
+import HeroTemplate from "@/components/tpl/HeroTemplate";
+import NavPill from "@/components/tpl/NavPill";
+import StackMarquee from "@/components/tpl/StackMarquee";
 
 export default function Home() {
   return (
     <>
-      <Nav />
-      <Hero />
+      <NavPill />
+      <HeroTemplate />
+      <StackMarquee />
       <main id="main">
-        <About />
-        <Stack />
+        <AboutTemplate />
         <Projects />
         <Experience />
         <Education />
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <DockBar />
     </>
   );
 }
