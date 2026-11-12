@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { EXPERIENCE_LABEL } from "@/components/lib/experience";
 
 // Required for `output: "export"` — renders the card once at build time.
 export const dynamic = "force-static";
@@ -9,7 +10,7 @@ export const contentType = "image/png";
 const stats = [
   { value: "~700", label: "buses tracked live" },
   { value: "~6M", label: "GPS packets / day" },
-  { value: "2.7 yrs", label: "production .NET" },
+  { value: `${EXPERIENCE_LABEL} yrs`, label: "production .NET" },
 ];
 
 export default function Image() {

@@ -1,10 +1,11 @@
+import { EXPERIENCE_YEARS } from "../lib/experience";
 import { CountUp } from "../ls/count-up";
 import Reveal from "../Reveal";
 
 /** His real production numbers — the template's demo figures do not apply. */
 const stats = [
   {
-    value: 2.7,
+    value: EXPERIENCE_YEARS,
     decimals: 1,
     suffix: "",
     label: "Years in production",

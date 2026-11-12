@@ -1,3 +1,4 @@
+import { EXPERIENCE_LABEL } from "../lib/experience";
 import { HangingIdCard } from "../ls/HangingIdCard";
 import TrackedLink from "../TrackedLink";
 
@@ -6,7 +7,7 @@ const ACCENT = "#6d3bf5";
 const idFacts = [
   { k: "Specialty", v: "Real-Time .NET" },
   { k: "Location", v: "Ahmedabad" },
-  { k: "Experience", v: "2.7 Years" },
+  { k: "Experience", v: `${EXPERIENCE_LABEL} Years` },
   { k: "Status", v: "Active", ok: true },
 ];
 

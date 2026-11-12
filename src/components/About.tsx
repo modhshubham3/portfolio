@@ -1,9 +1,10 @@
+import { EXPERIENCE_YEARS } from "./lib/experience";
 import { CountUp } from "./ls/count-up";
 import Reveal from "./Reveal";
 import { SectionHead } from "./ui";
 
 const stats = [
-  { label: "Shipping production code", value: 2.7, decimals: 1, suffix: "+ yrs" },
+  { label: "Shipping production code", value: EXPERIENCE_YEARS, decimals: 1, suffix: "+ yrs" },
   { label: "Buses live-tracked", value: 700, prefix: "~" },
   { label: "Transport authorities", value: 3 },
   { label: "GPS packets ingested daily", value: 6, prefix: "~", suffix: "M" },
