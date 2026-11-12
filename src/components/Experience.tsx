@@ -16,8 +16,8 @@ const bullets: React.ReactNode[] = [
   </span>,
   <span key="3">
     Kept the platform <strong>fast at production scale</strong> — PostgreSQL
-    partitioning and query tuning, Kafka pipeline reliability, and .NET service
-    optimization.
+    partitioning and query tuning (one production query went from 2.7 s to
+    about 0.28 s), Kafka pipeline reliability, and .NET service optimization.
   </span>,
 ];
 

@@ -47,9 +47,9 @@ export default function AboutTemplate() {
           <h2 className="text-[clamp(30px,4.4vw,46px)] font-extrabold leading-[1.1] tracking-[-0.02em]">
             Built for the{" "}
             <span className="bg-gradient-to-r from-[#7c3aed] via-[#5b6cf9] to-[#2f9bf5] bg-clip-text text-transparent">
-              second year
-            </span>{" "}
-            of production
+              long run
+            </span>
+            , not the launch demo
           </h2>
           <p className="mt-6 max-w-[58ch] text-[17px] leading-[1.7] text-muted">
             I&rsquo;m a software developer at Amnex Infotechnologies in Ahmedabad
